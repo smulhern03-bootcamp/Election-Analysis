@@ -54,11 +54,8 @@ Further modifications could be made to determine lowest voter turnout or analysi
        for county_name in county_votes:
             votes = county_votes[county_name]
             vote_percentage = float(votes)/ float(total_votes)*100
-            print(f"{county_name}: {vote_percentage:.1f}% ({votes:,})\n")
-            election_results = (f"{county_name}: {vote_percentage:.1f}% ({votes:,})\n")
-            txt_file.write(election_results)
             if (votes > smallest_count):
-                smallest_count = votes
-                smallest_county = county_name
+             smallest_count = votes
+             smallest_county = county_name
 
 Just as the county coding was modified from the candidate-centric code, the same small modifications could be made for demographics.  Depending on what data is provided.  The code can be modified to fit the research question.
